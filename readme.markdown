@@ -18,7 +18,7 @@ Is it hard to become a "Rails Expert" today? Yes. Harder than it used to be? Yes
 
 There's almost no point in becoming a Rails expert. Unless you're going to be Yehuda Katz or Aaron Patterson, spending your days refactoring the framework, true expertise in Rails is unnecessary.
 
-You probably don't want to be an expert in the framework, you want to be expert in *building application*. And that challenge hasn't changed.
+You probably don't want to be an expert in the framework, you want to be expert in *building applications*. And that challenge hasn't changed.
 
 ## Real Skills
 
@@ -66,7 +66,7 @@ The idea that first really changed my thinking was modeling "search" as a resour
 
 Oh. It doesn't matter. There's a difference between data existing and data persisting. We can have data that's critical to our application, critical to our user, and it never hits the database. It's ephemeral, it's here, then it's gone.
 
-Then I truly started seeing objects everywhere. I realized that objects aren't just about data, they're about functionality. How do we divide functions just like a database divides data -- increasing flexibility while decreasing duplication.
+Then I truly started seeing objects everywhere. I realized that objects aren't just about data, they're about functionality. How do we divide functions just like a database divides data -- increasing flexibility while decreasing duplication?
 
 ### ( Design Patterns in Ruby )
 
@@ -82,14 +82,14 @@ Everything I learned from studying these patterns boils down to this:
 
 * You write programs because of collections
 * Single Responsibility Principle / "Just One Idea"
-* Preserve Encapsulation (Law of Demeter, 'Tell, Don't Ask')
+* Preserve Encapsulation (Law of Demeter, "Tell, Don't Ask")
 * Clarity over Magic
 
 That's all I know about OO. Let's take a look at some ways to apply them to your Ruby and Rails code.
 
 ## Collections
 
-I said 'You write programs because of collections.' If you just had one thing, one piece of data, you probably wouldn't need a program. You could just "do" whatever you're doing. When we write a program it's because we have hundreds, thousands, millions of things -- Collections.
+I said "You write programs because of collections." If you just had one thing, one piece of data, you probably wouldn't need a program. You could just "do" whatever you're doing. When we write a program it's because we have hundreds, thousands, millions of things -- collections.
 
 Collections are the gateway drug of good Ruby. Ruby handles collections as comfortably as any language I've used.
 
@@ -159,11 +159,11 @@ But using modules is like inheritance taken to the next level. It's code reuse w
 
 ### Reuse via Module
 
-In this contact manager, we can achieve the same simplifications using a common Module. Like most of my Ruby, I'd write how I want to use the code first:
+In this contact manager, we can achieve the same simplifications using a common module. Like most of my Ruby, I'd write how I want to use the code first:
 
 #### (( Person and Company using Module ))
 
-Then implement the Module to make that work:
+Then implement the module to make that work:
 
 #### (( Contact Module ))
 
@@ -199,17 +199,17 @@ We all know that Ruby has tremendous powers for magic. We can metaprogram indire
 
 Refactoring sometimes gets a bad rap because people see it as pointless -- it already worked, why change it? Refactoring is just about making code shorter, right?
 
-And we can always make code shorter. We do have Perl roots, afterall.
+And we can always make code shorter. We do have Perl roots, after all.
 
 ### Refactoring
 
-But that's not what Refactoring is about, it's not what expert Rubyists do. Yes, Refactoring often results in shorter code, but that's only a side effect. We refactor to amplify clarity. To bring the implementation closer to the idea.
+But that's not what refactoring is about, it's not what expert Rubyists do. Yes, refactoring often results in shorter code, but that's only a side effect. We refactor to amplify clarity. To bring the implementation closer to the idea.
 
 ### Implementation and Ideas
 
 Computers don't think, they don't have ideas. Our jobs are, essentially, to translate the complex ideas of the world into language these electronics can understand. Once the basic meaning, the basic functionality, is achieved, we must work, constantly, to bring the implementation closer to the concept.
 
-As Rails developers, it's easy to fall in love with the new shiny. Let's look at a few ways we can amplify clarity be keeping it simple.
+As Rails developers, it's easy to fall in love with the new shiny. Let's look at a few ways we can amplify clarity by keeping it simple.
 
 ### Scopes
 
@@ -252,7 +252,7 @@ Or say there's too much boiler plate. Well, don't be scared. There are only four
 
 If you can understand those four ideas, then there's nothing complex. The implementation is close to the idea. "Hey, including class, take these as class methods, take these as instance methods, and run this bit of code inside yourself."
 
-`ActiveSupport::Concern` reduces code length, but it hurts clarity.
+`ActiveSupport::Concern` reduces code length but hurts clarity.
 
 ### Validations
 
@@ -268,7 +268,7 @@ And tells me that it's better because it is fewer lines of code. We know that's 
 
 We don't like inline comments in Ruby because the code should be readable, like English, itself.
 
-Close your eyes and let me read this to you. (( VALIDATES X presence true length 1..10 uniquness true)). Can you parse it? Sure, because your brain has been bent by programming. But if I read that to a normal person off the street, what sense would they make of it? Not much.
+Close your eyes and let me read this to you. (( VALIDATES X presence true length 1..10 uniqueness true)). Can you parse it? Sure, because your brain has been bent by programming. But if I read that to a normal person off the street, what sense would they make of it? Not much.
 
 #### (( Validates X of ))
 
